@@ -11,6 +11,7 @@ const getAttribute = props => {
       [selectMode]: true,
       [props.color]: props.color !== undefined,
       active: props.active,
+      rounded: props.rounded,
     }),
     disabled: props.disabled,
     tabIndex: props.disabled ? '-1' : 0,

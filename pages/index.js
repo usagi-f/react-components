@@ -6,8 +6,8 @@ const styles = css`
 section {
   display: flex;
 }
-section > div {
-  padding: 5px;
+button {
+  margin: 5px;
 }
 hr {
   border: 0;
@@ -49,11 +49,11 @@ const Index = () => (
         <Button mode="gost" disabled>Gost Button</Button>
       </div>
     </section>
-    <h4>Other Attribute</h4>
+    <h3>Other Attribute</h3>
     <Button type="submit">Change type to submit</Button>
     <Button content="Content by attribute" />
     <Button style={{ color: 'red' }}>Additional style</Button>
-    <h4>Color</h4>
+    <h3>Color</h3>
     <Button color="blue">Blue Button</Button>
     <Button color="purple">Purple Button</Button>
     <Button color="pink">Pink Button</Button>
@@ -63,6 +63,11 @@ const Index = () => (
     <Button color="lightgreen">Lightgreen Button</Button>
     <Button color="green">Green Button</Button>
     <Button color="lightblue">Lightblue Button</Button>
+    <h3>Rounded</h3>
+    <Button rounded>Default Button</Button>
+    <Button mode="primary" rounded>Primary Button</Button>
+    <Button mode="secondary" rounded>Secondary Button</Button>
+    <Button mode="gost" rounded>Gost Button</Button>
     <style jsx>{styles}</style>
   </Fragment>
 )

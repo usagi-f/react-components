@@ -16,6 +16,7 @@ export default css`
   border-radius: 4px;
   outline: none;
   cursor: pointer;
+  margin-right: 3px;
 }
 .active,
 .baseStyle:focus {
@@ -24,6 +25,9 @@ export default css`
 .baseStyle:disabled {
   opacity: .5;
   cursor: default;
+}
+.rounded {
+  border-radius: 20px;
 }
 .default {
   color: ${variable.color.gray100};
