@@ -1,0 +1,40 @@
+const variable = {
+  fontFamily: '"Noto Sans JP","Helvetica Neue",Arial,Helvetica,sans-serif',
+  size: {
+    mini: 9,
+    tiny: 10,
+    small: 11,
+    medium: 14,
+    large: 16,
+    big: 18,
+    huge: 20,
+    massive: 24,
+  },
+  color: {
+    main: '#1e3f59',
+    sub: '#1c7181',
+    primary: '#4985f2',
+    secondary: '#fff',
+    blue: '#4985f2',
+    purple: '#a849f2',
+    pink: '#f2499d',
+    red: '#f62c49',
+    orange: '#f8752e',
+    yellow: '#f2cc49',
+    lightgreen: '#99cd47',
+    green: '#2eac2e',
+    lightblue: '#45c7c2',
+    white: '#fff',
+    gray20: '#f0f0f0',
+    gray40: '#c6c6c6',
+    gray60: '#a1a1a1',
+    gray80: '#7a7a7a',
+    gray100: '#444',
+    black: '#222',
+  },
+  additionalColor: {
+    darkBlue: '#3e70cc',
+  },
+}
+
+export default variable
