@@ -1,4 +1,4 @@
-import css, { resolve } from 'styled-jsx/css'
+import css from 'styled-jsx/css'
 import variable from '../css/variable'
 
 export default css`

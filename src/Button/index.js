@@ -2,23 +2,32 @@ import React, { Fragment } from 'react'
 import cx from 'classnames'
 import styles from './styles'
 
-export default props => {
+const getAttribute = props => {
   const selectType = props.type || 'default'
-  const componentClass = cx({
-    baseStyle: true,
-    [selectType]: true,
+  return {
+    className: cx({
+      baseStyle: true,
+      [selectType]: true,
+      disabled: props.disabled,
+    }),
     disabled: props.disabled,
-  })
-  const additionalStyle = props.style || {}
+    tabIndex: props.disabled ? '-1' : 0,
+    additionalStyle: props.style || {},
+    content: props.content || props.children,
+  }
+}
+
+export default props => {
+  const attribute = getAttribute(props)
   return (
     <Fragment>
       <button
-        className={componentClass}
-        disabled={props.disabled}
-        tabIndex={props.disabled ? '-1' : 0}
-        style={additionalStyle}
+        className={attribute.className}
+        disabled={attribute.disabled}
+        tabIndex={attribute.tabIndex}
+        style={attribute.additionalStyle}
       >
-        {props.content || props.children}
+        {attribute.content}
       </button>
       <style jsx>{styles}</style>
     </Fragment>
