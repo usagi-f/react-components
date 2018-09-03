@@ -1,3 +1,3 @@
 # react-ui-components
 
-![SS](ss.png)
+<img src="ss.png" width="850" alt="SS">
