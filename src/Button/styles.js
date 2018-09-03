@@ -17,16 +17,22 @@ export default css`
   outline: none;
   cursor: pointer;
 }
+.active,
 .baseStyle:focus {
   box-shadow: rgba(0, 0, 0, .1) 0 0 0 2px;
+}
+.baseStyle:disabled {
+  opacity: .5;
+  cursor: default;
 }
 .default {
   color: ${variable.color.gray100};
   background-color: ${variable.color.white};
   border-color: ${variable.color.gray40};
 }
-.default:hover,
-.default:focus {
+.default:not(:disabled):hover,
+.default:focus,
+.default.active {
   background-color: ${variable.color.gray20};
 }
 .primary {
@@ -34,8 +40,9 @@ export default css`
   background-color: ${variable.color.blue};
   border-color: ${variable.additionalColor.darkBlue};
 }
-.primary:hover,
-.primary:focus {
+.primary:not(:disabled):hover,
+.primary:focus,
+.primary.active {
   background-color: ${variable.additionalColor.darkBlue};
 }
 .secondary {
@@ -43,8 +50,9 @@ export default css`
   background-color: ${variable.color.gray100};
   border-color: ${variable.color.black};
 }
-.secondary:hover,
-.secondary:focus {
+.secondary:not(:disabled):hover,
+.secondary:focus,
+.secondary.active {
   background-color: ${variable.color.black};
 }
 .gost {
@@ -52,8 +60,9 @@ export default css`
   background-color: transparent;
   border-color: transparent;
 }
-.gost:hover,
-.gost:focus {
+.gost:not(:disabled):hover,
+.gost:focus,
+.gost.active {
   background-color: ${variable.color.gray20};
 }
 .blue {
@@ -61,8 +70,9 @@ export default css`
   background-color: ${variable.color.blue};
   border-color: ${variable.color.blue};
 }
-.blue:hover,
-.blue:focus {
+.blue:not(:disabled):hover,
+.blue:focus,
+.blue.active {
   color: ${variable.color.blue};
   background-color: ${variable.color.white};
 }
@@ -71,8 +81,9 @@ export default css`
   background-color: ${variable.color.purple};
   border-color: ${variable.color.purple};
 }
-.purple:hover,
-.purple:focus {
+.purple:not(:disabled):hover,
+.purple:focus,
+.purple.active {
   color: ${variable.color.purple};
   background-color: ${variable.color.white};
 }
@@ -81,8 +92,9 @@ export default css`
   background-color: ${variable.color.pink};
   border-color: ${variable.color.pink};
 }
-.pink:hover,
-.pink:focus {
+.pink:not(:disabled):hover,
+.pink:focus,
+.pink.active {
   color: ${variable.color.pink};
   background-color: ${variable.color.white};
 }
@@ -91,8 +103,9 @@ export default css`
   background-color: ${variable.color.red};
   border-color: ${variable.color.red};
 }
-.red:hover,
-.red:focus {
+.red:not(:disabled):hover,
+.red:focus,
+.red.active {
   color: ${variable.color.red};
   background-color: ${variable.color.white};
 }
@@ -101,8 +114,9 @@ export default css`
   background-color: ${variable.color.orange};
   border-color: ${variable.color.orange};
 }
-.orange:hover,
-.orange:focus {
+.orange:not(:disabled):hover,
+.orange:focus,
+.orange.active {
   color: ${variable.color.orange};
   background-color: ${variable.color.white};
 }
@@ -111,8 +125,9 @@ export default css`
   background-color: ${variable.color.yellow};
   border-color: ${variable.color.yellow};
 }
-.yellow:hover,
-.yellow:focus {
+.yellow:not(:disabled):hover,
+.yellow:focus,
+.yellow.active {
   color: ${variable.color.yellow};
   background-color: ${variable.color.white};
 }
@@ -121,8 +136,9 @@ export default css`
   background-color: ${variable.color.lightgreen};
   border-color: ${variable.color.lightgreen};
 }
-.lightgreen:hover,
-.lightgreen:focus {
+.lightgreen:not(:disabled):hover,
+.lightgreen:focus,
+.lightgreen.active {
   color: ${variable.color.lightgreen};
   background-color: ${variable.color.white};
 }
@@ -131,8 +147,9 @@ export default css`
   background-color: ${variable.color.green};
   border-color: ${variable.color.green};
 }
-.green:hover,
-.green:focus {
+.green:not(:disabled):hover,
+.green:focus,
+.green.active {
   color: ${variable.color.green};
   background-color: ${variable.color.white};
 }
@@ -141,16 +158,10 @@ export default css`
   background-color: ${variable.color.lightblue};
   border-color: ${variable.color.lightblue};
 }
-.lightblue:hover,
-.lightblue:focus {
+.lightblue:not(:disabled):hover,
+.lightblue:focus,
+.lightblue.active {
   color: ${variable.color.lightblue};
   background-color: ${variable.color.white};
-}
-.disabled {
-  opacity: .5;
-  cursor: default;
-}
-.disabled:hover {
-  background-color: initial;
 }
 `

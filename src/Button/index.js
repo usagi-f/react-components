@@ -3,13 +3,14 @@ import cx from 'classnames'
 import styles from './styles'
 
 const getAttribute = props => {
-  const selectType = props.type || 'default'
+  const selectMode = props.mode || 'default'
   return {
+    type: props.type || 'button',
     className: cx({
       baseStyle: true,
-      [selectType]: true,
-      disabled: props.disabled,
+      [selectMode]: true,
       [props.color]: props.color !== undefined,
+      active: props.active,
     }),
     disabled: props.disabled,
     tabIndex: props.disabled ? '-1' : 0,
@@ -23,6 +24,7 @@ export default props => {
   return (
     <Fragment>
       <button
+        type={attribute.type}
         className={attribute.className}
         disabled={attribute.disabled}
         tabIndex={attribute.tabIndex}
