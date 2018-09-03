@@ -16,6 +16,7 @@ const getAttribute = props => {
     disabled: props.disabled,
     tabIndex: props.disabled ? '-1' : 0,
     additionalStyle: props.style || {},
+    label: props.label,
     content: props.content || props.children,
   }
 }
@@ -30,6 +31,7 @@ export default props => {
         disabled={attribute.disabled}
         tabIndex={attribute.tabIndex}
         style={attribute.additionalStyle}
+        {...props}
       >
         {attribute.content}
       </button>

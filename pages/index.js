@@ -53,6 +53,7 @@ const Index = () => (
     <Button type="submit">Change type to submit</Button>
     <Button content="Content by attribute" />
     <Button style={{ color: 'red' }}>Additional style</Button>
+    <Button aria-label="foobar">Aria Label</Button>
     <h3>Color</h3>
     <Button color="blue">Blue Button</Button>
     <Button color="purple">Purple Button</Button>
