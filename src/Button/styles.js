@@ -168,4 +168,15 @@ export default css`
   color: ${variable.color.lightblue};
   background-color: ${variable.color.white};
 }
+.white {
+  color: ${variable.color.white};
+  background-color: transparent;
+  border-color: ${variable.color.white};
+}
+.white:not(:disabled):hover,
+.white:focus,
+.white.active {
+  color: ${variable.color.black};
+  background-color: ${variable.color.white};
+}
 `
