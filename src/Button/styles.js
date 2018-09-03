@@ -20,13 +20,6 @@ export default css`
 .baseStyle:focus {
   box-shadow: rgba(0, 0, 0, .1) 0 0 0 2px;
 }
-.disabled {
-  opacity: .5;
-  cursor: default;
-}
-.disabled:hover {
-  background-color: initial;
-}
 .default {
   color: ${variable.color.gray100};
   background-color: ${variable.color.white};
@@ -152,5 +145,12 @@ export default css`
 .lightblue:focus {
   color: ${variable.color.lightblue};
   background-color: ${variable.color.white};
+}
+.disabled {
+  opacity: .5;
+  cursor: default;
+}
+.disabled:hover {
+  background-color: initial;
 }
 `
