@@ -16,7 +16,6 @@ const getAttribute = props => {
     disabled: props.disabled,
     tabIndex: props.disabled ? '-1' : 0,
     additionalStyle: props.style || {},
-    label: props.label,
     content: props.content || props.children,
   }
 }
