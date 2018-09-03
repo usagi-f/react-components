@@ -20,6 +20,13 @@ export default css`
 .baseStyle:focus {
   box-shadow: rgba(0, 0, 0, .1) 0 0 0 2px;
 }
+.disabled {
+  opacity: .5;
+  cursor: default;
+}
+.disabled:hover {
+  background-color: initial;
+}
 .default {
   color: ${variable.color.gray100};
   background-color: ${variable.color.white};
@@ -56,11 +63,94 @@ export default css`
 .gost:focus {
   background-color: ${variable.color.gray20};
 }
-.disabled {
-  opacity: .5;
-  cursor: default;
+.blue {
+  color: ${variable.color.white};
+  background-color: ${variable.color.blue};
+  border-color: ${variable.color.blue};
 }
-.disabled:hover {
-  background-color: initial;
+.blue:hover,
+.blue:focus {
+  color: ${variable.color.blue};
+  background-color: ${variable.color.white};
+}
+.purple {
+  color: ${variable.color.white};
+  background-color: ${variable.color.purple};
+  border-color: ${variable.color.purple};
+}
+.purple:hover,
+.purple:focus {
+  color: ${variable.color.purple};
+  background-color: ${variable.color.white};
+}
+.pink {
+  color: ${variable.color.white};
+  background-color: ${variable.color.pink};
+  border-color: ${variable.color.pink};
+}
+.pink:hover,
+.pink:focus {
+  color: ${variable.color.pink};
+  background-color: ${variable.color.white};
+}
+.red {
+  color: ${variable.color.white};
+  background-color: ${variable.color.red};
+  border-color: ${variable.color.red};
+}
+.red:hover,
+.red:focus {
+  color: ${variable.color.red};
+  background-color: ${variable.color.white};
+}
+.orange {
+  color: ${variable.color.white};
+  background-color: ${variable.color.orange};
+  border-color: ${variable.color.orange};
+}
+.orange:hover,
+.orange:focus {
+  color: ${variable.color.orange};
+  background-color: ${variable.color.white};
+}
+.yellow {
+  color: ${variable.color.white};
+  background-color: ${variable.color.yellow};
+  border-color: ${variable.color.yellow};
+}
+.yellow:hover,
+.yellow:focus {
+  color: ${variable.color.yellow};
+  background-color: ${variable.color.white};
+}
+.lightgreen {
+  color: ${variable.color.white};
+  background-color: ${variable.color.lightgreen};
+  border-color: ${variable.color.lightgreen};
+}
+.lightgreen:hover,
+.lightgreen:focus {
+  color: ${variable.color.lightgreen};
+  background-color: ${variable.color.white};
+}
+.green {
+  color: ${variable.color.white};
+  background-color: ${variable.color.green};
+  border-color: ${variable.color.green};
+}
+.green:hover,
+.green:focus {
+  color: ${variable.color.green};
+  background-color: ${variable.color.white};
+}
+.lightblue {
+  color: ${variable.color.white};
+  background-color: ${variable.color.lightblue};
+  border-color: ${variable.color.lightblue};
+}
+.lightblue:hover,
+.lightblue:focus {
+  color: ${variable.color.lightblue};
+  background-color: ${variable.color.white};
 }
 `

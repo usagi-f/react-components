@@ -9,6 +9,7 @@ const getAttribute = props => {
       baseStyle: true,
       [selectType]: true,
       disabled: props.disabled,
+      [props.color]: props.color !== undefined,
     }),
     disabled: props.disabled,
     tabIndex: props.disabled ? '-1' : 0,
