@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import Button from '../src/Button'
+import { Button } from '../src/index'
 
 const styles = css`
-section {
+.flex {
   display: flex;
 }
 button {
@@ -22,62 +22,64 @@ hr {
 
 const Index = () => (
   <Fragment>
-    <h3>Button</h3>
+    <h2>Button</h2>
     <section>
-      <div>
-        <h5>Default</h5>
-        <Button>Default Button</Button>
-        <hr />
-        <Button mode="primary">Primary Button</Button>
-        <hr />
-        <Button mode="secondary">Secondary Button</Button>
-        <hr />
-        <Button mode="gost">Gost Button</Button>
+      <div className="flex">
+        <div>
+          <h5>Default</h5>
+          <Button>Default Button</Button>
+          <hr />
+          <Button mode="primary">Primary Button</Button>
+          <hr />
+          <Button mode="secondary">Secondary Button</Button>
+          <hr />
+          <Button mode="gost">Gost Button</Button>
+        </div>
+        <div>
+          <h5>Active/Focus</h5>
+          <Button active>Default Button</Button>
+          <hr />
+          <Button mode="primary" active>Primary Button</Button>
+          <hr />
+          <Button mode="secondary" active>Secondary Button</Button>
+          <hr />
+          <Button mode="gost" active>Gost Button</Button>
+        </div>
+        <div>
+          <h5>Disabled</h5>
+          <Button disabled>Default Button</Button>
+          <hr />
+          <Button mode="primary" disabled>Primary Button</Button>
+          <hr />
+          <Button mode="secondary" disabled>Secondary Button</Button>
+          <hr />
+          <Button mode="gost" disabled>Gost Button</Button>
+        </div>
       </div>
-      <div>
-        <h5>Active/Focus</h5>
-        <Button active>Default Button</Button>
-        <hr />
-        <Button mode="primary" active>Primary Button</Button>
-        <hr />
-        <Button mode="secondary" active>Secondary Button</Button>
-        <hr />
-        <Button mode="gost" active>Gost Button</Button>
+      <h4>Other Attribute</h4>
+      <Button type="submit">Change type to submit</Button>
+      <Button content="Content by attribute" />
+      <Button style={{ color: 'red' }}>Additional style</Button>
+      <Button aria-label="foobar">Aria Label</Button>
+      <h4>Color</h4>
+      <Button color="blue">Blue Button</Button>
+      <Button color="purple">Purple Button</Button>
+      <Button color="pink">Pink Button</Button>
+      <Button color="red">Red Button</Button>
+      <Button color="orange">Orange Button</Button><br />
+      <Button color="yellow">Yellow Button</Button>
+      <Button color="lightgreen">Lightgreen Button</Button>
+      <Button color="green">Green Button</Button>
+      <Button color="lightblue">Lightblue Button</Button><br />
+      <div className="bgblack">
+        <Button color="white">white Button</Button>
       </div>
-      <div>
-        <h5>Disabled</h5>
-        <Button disabled>Default Button</Button>
-        <hr />
-        <Button mode="primary" disabled>Primary Button</Button>
-        <hr />
-        <Button mode="secondary" disabled>Secondary Button</Button>
-        <hr />
-        <Button mode="gost" disabled>Gost Button</Button>
-      </div>
+      <h4>Rounded</h4>
+      <Button rounded>Default Button</Button>
+      <Button mode="primary" rounded>Primary Button</Button>
+      <Button mode="secondary" rounded>Secondary Button</Button>
+      <Button mode="gost" rounded>Gost Button</Button>
     </section>
-    <h4>Other Attribute</h4>
-    <Button type="submit">Change type to submit</Button>
-    <Button content="Content by attribute" />
-    <Button style={{ color: 'red' }}>Additional style</Button>
-    <Button aria-label="foobar">Aria Label</Button>
-    <h4>Color</h4>
-    <Button color="blue">Blue Button</Button>
-    <Button color="purple">Purple Button</Button>
-    <Button color="pink">Pink Button</Button>
-    <Button color="red">Red Button</Button>
-    <Button color="orange">Orange Button</Button><br />
-    <Button color="yellow">Yellow Button</Button>
-    <Button color="lightgreen">Lightgreen Button</Button>
-    <Button color="green">Green Button</Button>
-    <Button color="lightblue">Lightblue Button</Button><br />
-    <div className="bgblack">
-      <Button color="white">white Button</Button>
-    </div>
-    <h4>Rounded</h4>
-    <Button rounded>Default Button</Button>
-    <Button mode="primary" rounded>Primary Button</Button>
-    <Button mode="secondary" rounded>Secondary Button</Button>
-    <Button mode="gost" rounded>Gost Button</Button>
     <style jsx>{styles}</style>
   </Fragment>
 )

@@ -15,6 +15,7 @@ const getAttribute = props => {
     }),
     disabled: props.disabled,
     tabIndex: props.disabled ? '-1' : 0,
+    ariaLabel: props['aria-label'],
     additionalStyle: props.style || {},
     content: props.content || props.children,
   }
@@ -29,8 +30,8 @@ export default props => {
         className={attribute.className}
         disabled={attribute.disabled}
         tabIndex={attribute.tabIndex}
+        aria-label={attribute.ariaLabel}
         style={attribute.additionalStyle}
-        {...props}
       >
         {attribute.content}
       </button>
