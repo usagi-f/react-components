@@ -33,7 +33,8 @@ const variable = {
     black: '#222',
   },
   additionalColor: {
-    darkBlue: '#3e70cc',
+    darkblue: '#3e70cc',
+    lightred: '#fff3f6',
   },
 }
 

@@ -20,7 +20,7 @@ export default css`
 }
 .active,
 .baseStyle:focus {
-  box-shadow: rgba(0, 0, 0, .1) 0 0 0 2px;
+  box-shadow: rgba(0, 0, 0, .1) 0 0 0 3px;
 }
 .baseStyle:disabled {
   opacity: .5;
@@ -42,12 +42,12 @@ export default css`
 .primary {
   color: ${variable.color.white};
   background-color: ${variable.color.blue};
-  border-color: ${variable.additionalColor.darkBlue};
+  border-color: ${variable.additionalColor.darkblue};
 }
 .primary:not(:disabled):hover,
 .primary:focus,
 .primary.active {
-  background-color: ${variable.additionalColor.darkBlue};
+  background-color: ${variable.additionalColor.darkblue};
 }
 .secondary {
   color: ${variable.color.white};
