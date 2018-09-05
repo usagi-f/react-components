@@ -16,23 +16,25 @@ export default css`
   border-radius: 4px;
   outline: none;
   margin-right: 3px;
-}
-.baseStyle.active,
-.baseStyle:focus {
-  border-color: ${variable.color.blue};
-  box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px rgba(0, 0, 0, .1);
-}
-.baseStyle:disabled {
-  opacity: .5;
-  background-color: ${variable.color.gray20};
-}
-.baseStyle.error {
-  border-color: ${variable.color.red};
-  background-color: ${variable.additionalColor.lightred};
-  box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px ${variable.additionalColor.lightred};
-}
-.baseStyle.error:placeholder-shown,
-.baseStyle.error::-webkit-input-placeholder {
-  color: ${variable.color.red};
+
+  &.active,
+  &:focus {
+    border-color: ${variable.color.blue};
+    box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px rgba(0, 0, 0, .1);
+  }
+  &:disabled {
+    opacity: .5;
+    background-color: ${variable.color.gray20};
+  }
+  &.error {
+    border-color: ${variable.color.red};
+    background-color: ${variable.additionalColor.lightred};
+    box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px ${variable.additionalColor.lightred};
+
+    &:placeholder-shown,
+    &::-webkit-input-placeholder {
+      color: ${variable.color.red};
+    }
+  }
 }
 `

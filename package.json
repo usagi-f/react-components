@@ -16,5 +16,9 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "styled-jsx": "^3.0.2"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.3",
+    "styled-jsx-plugin-sass": "^0.2.4"
   }
 }

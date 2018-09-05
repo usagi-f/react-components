@@ -17,166 +17,127 @@ export default css`
   outline: none;
   cursor: pointer;
   margin-right: 3px;
+
+  &:focus {
+    box-shadow: rgba(0, 0, 0, .1) 0 0 0 3px;
+  }
+
+  &:disabled {
+    opacity: .5;
+    cursor: default;
+  }
 }
-.active,
-.baseStyle:focus {
+.active {
   box-shadow: rgba(0, 0, 0, .1) 0 0 0 3px;
-}
-.baseStyle:disabled {
-  opacity: .5;
-  cursor: default;
 }
 .rounded {
   border-radius: 20px;
 }
+
+// mode
+
+@mixin buttonMode($color, $bg, $border, $activeBg) {
+  color: $color;
+  background-color: $bg;
+  border-color: $border;
+
+  &:not(:disabled):hover,
+  &:focus,
+  &.active {
+    background-color: $activeBg;
+  }
+}
+
 .default {
-  color: ${variable.color.gray100};
-  background-color: ${variable.color.white};
-  border-color: ${variable.color.gray40};
+  @include buttonMode(
+    ${variable.color.gray100},
+    ${variable.color.white},
+    ${variable.color.gray40},
+    ${variable.color.gray20}
+  )
 }
-.default:not(:disabled):hover,
-.default:focus,
-.default.active {
-  background-color: ${variable.color.gray20};
-}
+
 .primary {
-  color: ${variable.color.white};
-  background-color: ${variable.color.blue};
-  border-color: ${variable.additionalColor.darkblue};
+  @include buttonMode(
+    ${variable.color.white},
+    ${variable.color.blue},
+    ${variable.additionalColor.darkblue},
+    ${variable.additionalColor.darkblue}
+  )
 }
-.primary:not(:disabled):hover,
-.primary:focus,
-.primary.active {
-  background-color: ${variable.additionalColor.darkblue};
-}
+
 .secondary {
-  color: ${variable.color.white};
-  background-color: ${variable.color.gray100};
-  border-color: ${variable.color.black};
+  @include buttonMode(
+    ${variable.color.white},
+    ${variable.color.gray100},
+    ${variable.color.black},
+    ${variable.color.black}
+  )
 }
-.secondary:not(:disabled):hover,
-.secondary:focus,
-.secondary.active {
-  background-color: ${variable.color.black};
-}
+
 .gost {
-  color: ${variable.color.gray100};
-  background-color: transparent;
-  border-color: transparent;
+  @include buttonMode(
+    ${variable.color.gray100},
+    transparent,
+    transparent,
+    ${variable.color.gray20}
+  )
 }
-.gost:not(:disabled):hover,
-.gost:focus,
-.gost.active {
-  background-color: ${variable.color.gray20};
+
+// color
+
+@mixin buttonColor($color) {
+  color: ${variable.color.white};
+  background-color: $color;
+  border-color: $color;
+
+  &:not(:disabled):hover,
+  &:focus,
+  &.active {
+    color: $color;
+    background-color: ${variable.color.white};
+  }
 }
+
 .blue {
-  color: ${variable.color.white};
-  background-color: ${variable.color.blue};
-  border-color: ${variable.color.blue};
+  @include buttonColor(${variable.color.blue})
 }
-.blue:not(:disabled):hover,
-.blue:focus,
-.blue.active {
-  color: ${variable.color.blue};
-  background-color: ${variable.color.white};
-}
+
 .purple {
-  color: ${variable.color.white};
-  background-color: ${variable.color.purple};
-  border-color: ${variable.color.purple};
+  @include buttonColor(${variable.color.purple})
 }
-.purple:not(:disabled):hover,
-.purple:focus,
-.purple.active {
-  color: ${variable.color.purple};
-  background-color: ${variable.color.white};
-}
+
 .pink {
-  color: ${variable.color.white};
-  background-color: ${variable.color.pink};
-  border-color: ${variable.color.pink};
-}
-.pink:not(:disabled):hover,
-.pink:focus,
-.pink.active {
-  color: ${variable.color.pink};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.pink})
 }
 .red {
-  color: ${variable.color.white};
-  background-color: ${variable.color.red};
-  border-color: ${variable.color.red};
-}
-.red:not(:disabled):hover,
-.red:focus,
-.red.active {
-  color: ${variable.color.red};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.red})
 }
 .orange {
-  color: ${variable.color.white};
-  background-color: ${variable.color.orange};
-  border-color: ${variable.color.orange};
-}
-.orange:not(:disabled):hover,
-.orange:focus,
-.orange.active {
-  color: ${variable.color.orange};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.orange})
 }
 .yellow {
-  color: ${variable.color.white};
-  background-color: ${variable.color.yellow};
-  border-color: ${variable.color.yellow};
-}
-.yellow:not(:disabled):hover,
-.yellow:focus,
-.yellow.active {
-  color: ${variable.color.yellow};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.yellow})
 }
 .lightgreen {
-  color: ${variable.color.white};
-  background-color: ${variable.color.lightgreen};
-  border-color: ${variable.color.lightgreen};
-}
-.lightgreen:not(:disabled):hover,
-.lightgreen:focus,
-.lightgreen.active {
-  color: ${variable.color.lightgreen};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.lightgreen})
 }
 .green {
-  color: ${variable.color.white};
-  background-color: ${variable.color.green};
-  border-color: ${variable.color.green};
-}
-.green:not(:disabled):hover,
-.green:focus,
-.green.active {
-  color: ${variable.color.green};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.green})
 }
 .lightblue {
-  color: ${variable.color.white};
-  background-color: ${variable.color.lightblue};
-  border-color: ${variable.color.lightblue};
-}
-.lightblue:not(:disabled):hover,
-.lightblue:focus,
-.lightblue.active {
-  color: ${variable.color.lightblue};
-  background-color: ${variable.color.white};
+  @include buttonColor(${variable.color.lightblue})
 }
 .white {
   color: ${variable.color.white};
   background-color: transparent;
   border-color: ${variable.color.white};
-}
-.white:not(:disabled):hover,
-.white:focus,
-.white.active {
-  color: ${variable.color.black};
-  background-color: ${variable.color.white};
+
+  &:not(:disabled):hover,
+  &:focus,
+  &.active {
+    color: ${variable.color.black};
+    background-color: ${variable.color.white};
+  }
 }
 `
