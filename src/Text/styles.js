@@ -9,5 +9,6 @@ export default css`
   color: ${variable.color.gray100};
   letter-spacing: .02em;
   margin: 1em 0;
+  -webkit-font-smoothing: antialiased;
 }
 `

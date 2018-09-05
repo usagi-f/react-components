@@ -16,6 +16,7 @@ export default css`
   border-radius: 4px;
   outline: none;
   margin-right: 3px;
+  -webkit-font-smoothing: antialiased;
 
   &.active,
   &:focus {

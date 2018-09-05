@@ -9,6 +9,7 @@ export default css`
   color: ${variable.color.gray100};
   letter-spacing: .02em;
   margin: 0 0 20px;
+  -webkit-font-smoothing: antialiased;
 
   &.h2 {
     font-size: ${variable.size.huge}px;
