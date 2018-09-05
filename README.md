@@ -11,4 +11,4 @@ $ open http://localhost:3000
 
 # ScreenShots
 
-<img src="ss.png" width="850" alt="SS">
+<img src="ss.png" width="1100" alt="SS">
