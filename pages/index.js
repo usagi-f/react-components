@@ -1,13 +1,18 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import { Button, Input, Header } from '../src/index'
+import { Button, Input, Header, Text } from '../src/index'
 
 const styles = css`
+h1 + section {
+  padding: 0 20px;
+  margin-bottom: 80px;
+}
 .flex {
   display: flex;
-}
-.flex > div {
-  padding: 0 5px;
+
+  & > div {
+    padding: 0 5px;
+  }
 }
 button {
   margin: 5px;
@@ -25,7 +30,7 @@ hr {
 
 const Index = () => (
   <Fragment>
-    <h2>Button</h2>
+    <h1>Button</h1>
     <section>
       <div className="flex">
         <div>
@@ -83,7 +88,7 @@ const Index = () => (
       <Button mode="secondary" rounded>Secondary Button</Button>
       <Button mode="gost" rounded>Gost Button</Button>
     </section>
-    <h2>Input</h2>
+    <h1>Input</h1>
     <section>
       <div className="flex">
         <div>
@@ -117,17 +122,21 @@ const Index = () => (
       <h5>Additional style</h5>
       <Input style={{ width: '100%' }} />
     </section>
-    <h2>Header</h2>
+    <h1>Header</h1>
     <section>
-      <h5>Headers h1 ~ h6</h5>
+      <h4>Headers h1 ~ h6</h4>
       <Header>h1. Alternatives to Placeholder Text</Header>
       <Header as="h2">h2. Improve form usability by addressing the perils of placeholders</Header>
       <Header as="h3">h3. Placeholders should be of a lighter value than input text</Header>
       <Header as="h4">h4. Placeholders should be visible on all screens</Header>
       <Header as="h5">h5. Placeholder as an example</Header>
       <Header as="h6">h6. Placeholders should not disappear when a user clicks into the input</Header>
-      <h5>Other Attribute</h5>
-      <Header style={{ textDecoration: 'underline' }}>Additional style</Header>
+      <h4>Other Attribute</h4>
+      <Header style={{ textDecoration: 'underline' }}>h1. Additional style Header</Header>
+    </section>
+    <h1>Paragraph</h1>
+    <section>
+      <Text>Placeholder text can be used as an attribute for almost every HTML input type, and misguided designers and developers don't hesitate. It is tempting to provide text help for complex forms, or omit input labels to improve aesthetics. However, employing placeholder text to do so causes many usability issues.</Text>
     </section>
     <style jsx>{styles}</style>
   </Fragment>

@@ -6,6 +6,8 @@ export default css`
   font-family: ${variable.fontFamily};
   font-size: ${variable.size.massive}px;
   font-weight: 600;
+  color: ${variable.color.gray100};
+  letter-spacing: .02em;
   margin: 0 0 20px;
 
   &.h2 {
