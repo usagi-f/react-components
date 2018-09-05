@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import { Button, Input } from '../src/index'
+import { Button, Input, Header } from '../src/index'
 
 const styles = css`
 .flex {
@@ -116,6 +116,18 @@ const Index = () => (
       <Input password />
       <h5>Additional style</h5>
       <Input style={{ width: '100%' }} />
+    </section>
+    <h2>Header</h2>
+    <section>
+      <h5>Headers h1 ~ h6</h5>
+      <Header>h1. Alternatives to Placeholder Text</Header>
+      <Header as="h2">h2. Improve form usability by addressing the perils of placeholders</Header>
+      <Header as="h3">h3. Placeholders should be of a lighter value than input text</Header>
+      <Header as="h4">h4. Placeholders should be visible on all screens</Header>
+      <Header as="h5">h5. Placeholder as an example</Header>
+      <Header as="h6">h6. Placeholders should not disappear when a user clicks into the input</Header>
+      <h5>Other Attribute</h5>
+      <Header style={{ textDecoration: 'underline' }}>Additional style</Header>
     </section>
     <style jsx>{styles}</style>
   </Fragment>
