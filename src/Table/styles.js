@@ -26,6 +26,14 @@ export default css`
   border-bottom-color: ${variable.color.gray40};
   border-right-color: ${variable.color.gray20};
   text-align: left;
+
+  &.sortable {
+    cursor: pointer;
+
+    &:hover {
+      background-color: ${variable.color.gray20};
+    }
+  }
 }
 .td {
   padding: 10px 15px;

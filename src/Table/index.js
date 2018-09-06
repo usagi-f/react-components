@@ -6,9 +6,11 @@ const getAttribute = (props, tag) => ({
   className: cx({
     baseStyle: true,
     [tag]: tag !== (undefined || ''),
+    sortable: props.onClick && tag === 'th',
   }),
   additionalStyle: props.style || {},
   content: props.content || props.children,
+  onClick: props.onClick || {},
 })
 
 const Table = props => {
@@ -63,6 +65,7 @@ Table.HeaderCell = props => {
       <th
         className={attribute.className}
         style={attribute.additionalStyle}
+        onClick={attribute.onClick}
       >
         {attribute.content}
       </th>
