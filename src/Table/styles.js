@@ -26,13 +26,17 @@ export default css`
   border-bottom-color: ${variable.color.gray40};
   border-right-color: ${variable.color.gray20};
   text-align: left;
+  position: relative;
 
   &.sortable {
     cursor: pointer;
-
-    &:hover {
-      background-color: ${variable.color.gray20};
-    }
+  }
+  &.sorted {
+    padding-right: 30px;
+  }
+  &.sorted,
+  &.sortable:hover {
+    background-color: ${variable.color.gray20};
   }
 }
 .td {
@@ -46,5 +50,26 @@ export default css`
   &:last-child {
     border-bottom: none;
   }
+}
+.descending,
+.ascending {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: inline;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+.descending {
+  border-width: 4px 4px 0 4px;
+  border-top-color: ${variable.color.main};
+}
+.ascending {
+  border-width: 0 4px 4px 4px;
+  border-bottom-color: ${variable.color.main};
 }
 `

@@ -178,8 +178,18 @@ const Index = () => (
       <Table>
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell onClick={() => alert('test')}>Evidence Rating</Table.HeaderCell>
-            <Table.HeaderCell onClick={() => alert('test')}>Name</Table.HeaderCell>
+            <Table.HeaderCell
+              sorted="descending"
+              onClick={() => alert('test')}
+            >
+              Evidence Rating
+            </Table.HeaderCell>
+            <Table.HeaderCell
+              sorted="ascending"
+              onClick={() => alert('test')}
+            >
+              Name
+            </Table.HeaderCell>
             <Table.HeaderCell onClick={() => alert('test')}>Consensus</Table.HeaderCell>
             <Table.HeaderCell onClick={() => alert('test')}>Description</Table.HeaderCell>
           </Table.Row>

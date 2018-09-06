@@ -2,16 +2,31 @@ import React, { Component, Fragment } from 'react'
 import cx from 'classnames'
 import styles from './styles'
 
-const getAttribute = (props, tag) => ({
-  className: cx({
-    baseStyle: true,
-    [tag]: tag !== (undefined || ''),
-    sortable: props.onClick && tag === 'th',
-  }),
-  additionalStyle: props.style || {},
-  content: props.content || props.children,
-  onClick: props.onClick || null,
-})
+const getAttribute = (props, tag) => {
+  const isSorted = props.sorted === 'descending' || props.sorted === 'ascending'
+  return {
+    className: cx({
+      baseStyle: true,
+      [tag]: tag !== (undefined || ''),
+      sortable: props.onClick && tag === 'th',
+      sorted: isSorted,
+    }),
+    sorted: isSorted ? props.sorted : null,
+    additionalStyle: props.style || {},
+    content: props.content || props.children,
+    onClick: props.onClick || null,
+  }
+}
+
+const SortedIcon = props => {
+  if (!props.type) return null
+  return (
+    <Fragment>
+      <span className={props.type} aria-label={props.type} />
+      <style jsx>{styles}</style>
+    </Fragment>
+  )
+}
 
 const Table = props => {
   const attribute = getAttribute(props, 'table')
@@ -68,6 +83,7 @@ Table.HeaderCell = props => {
         onClick={attribute.onClick}
       >
         {attribute.content}
+        <SortedIcon type={attribute.sorted} />
       </th>
       <style jsx>{styles}</style>
     </Fragment>
