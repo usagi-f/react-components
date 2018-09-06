@@ -10,7 +10,7 @@ const getAttribute = (props, tag) => ({
   }),
   additionalStyle: props.style || {},
   content: props.content || props.children,
-  onClick: props.onClick || {},
+  onClick: props.onClick || null,
 })
 
 const Table = props => {
