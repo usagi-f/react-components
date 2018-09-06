@@ -21,7 +21,7 @@ export default css`
   }
 }
 .th {
-  padding: 18px 15px;
+  padding: 18px 30px 18px 15px;
   color: ${variable.color.main};
   border-bottom-color: ${variable.color.gray40};
   border-right-color: ${variable.color.gray20};
@@ -32,7 +32,7 @@ export default css`
     cursor: pointer;
   }
   &.sorted {
-    padding-right: 30px;
+    user-select: none;
   }
   &.sorted,
   &.sortable:hover {
