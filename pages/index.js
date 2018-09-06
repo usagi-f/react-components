@@ -69,6 +69,7 @@ const Index = () => (
       <Button content="Content by attribute" />
       <Button style={{ color: 'red' }}>Additional style</Button>
       <Button aria-label="foobar">Aria Label</Button>
+      <Button onClick={() => alert('test')}>Callback Function</Button>
       <h4>Color</h4>
       <Button color="blue">Blue Button</Button>
       <Button color="purple">Purple Button</Button>
@@ -121,6 +122,8 @@ const Index = () => (
       <Input password />
       <h5>Additional style</h5>
       <Input style={{ width: '100%' }} />
+      <h5>Callback Function</h5>
+      <Input onChange={e => console.log('change input value: ' + e.target.value)} />
     </section>
     <h1>Header</h1>
     <section>

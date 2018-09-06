@@ -18,6 +18,7 @@ const getAttribute = props => {
     ariaLabel: props['aria-label'],
     additionalStyle: props.style || {},
     content: props.content || props.children,
+    onClick: props.onClick || null,
   }
 }
 
@@ -32,6 +33,7 @@ export default props => {
         tabIndex={attribute.tabIndex}
         aria-label={attribute.ariaLabel}
         style={attribute.additionalStyle}
+        onClick={attribute.onClick}
       >
         {attribute.content}
       </button>

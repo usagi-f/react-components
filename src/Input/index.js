@@ -13,6 +13,7 @@ const getAttribute = props => ({
   tabIndex: props.disabled ? '-1' : 0,
   placeholder: props.placeholder || '',
   additionalStyle: props.style || {},
+  onChange: props.onChange || null,
 })
 
 export default props => {
@@ -26,6 +27,7 @@ export default props => {
         tabIndex={attribute.tabIndex}
         placeholder={attribute.placeholder}
         style={attribute.additionalStyle}
+        onChange={attribute.onChange}
       />
       <style jsx>{styles}</style>
     </Fragment>
