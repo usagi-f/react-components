@@ -3,9 +3,12 @@ import css from 'styled-jsx/css'
 import { Buttons, Inputs, Headers, Texts, Tables } from './example/index'
 
 const styles = css`
-h1 + section {
-  padding: 0 20px;
-  margin-bottom: 80px;
+h1 {
+  margin: 80px 0 20px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 `
 
