@@ -15,6 +15,7 @@ export default class MyDocument extends Document {
           <title>react ui component</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&amp;subset=japanese" />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/svg-with-js.css" />
         </Head>
         <body>
           <Main />
