@@ -3,7 +3,7 @@ const variable = {
   size: {
     mini: 9,
     tiny: 10,
-    small: 11,
+    small: 12,
     medium: 14,
     large: 16,
     big: 18,

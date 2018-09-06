@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import { Button, Input, Header, Text } from '../src/index'
+import { Button, Input, Header, Text, Table } from '../src/index'
 
 const styles = css`
 h1 + section {
@@ -142,6 +142,39 @@ const Index = () => (
       <Text>Placeholder text can be used as an attribute for almost every HTML input type, and misguided designers and developers don't hesitate. It is tempting to provide text help for complex forms, or omit input labels to improve aesthetics. However, employing placeholder text to do so causes many usability issues.</Text>
     </section>
     <style jsx>{styles}</style>
+    <h1>Table</h1>
+    <section>
+      <Table>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>Evidence Rating</Table.HeaderCell>
+            <Table.HeaderCell>Name</Table.HeaderCell>
+            <Table.HeaderCell>Consensus</Table.HeaderCell>
+            <Table.HeaderCell>Description</Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
+          <Table.Row>
+            <Table.Cell>B</Table.Cell>
+            <Table.Cell>John</Table.Cell>
+            <Table.Cell>80%</Table.Cell>
+            <Table.Cell>John is an interesting boy but sometimes you don't really have enough room to describe everything you'd like</Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>A</Table.Cell>
+            <Table.Cell>Jamie</Table.Cell>
+            <Table.Cell>100%</Table.Cell>
+            <Table.Cell>Jamie is a kind girl but sometimes you don't really have enough room to describe everything you'd like</Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>D</Table.Cell>
+            <Table.Cell>Jill</Table.Cell>
+            <Table.Cell>10%</Table.Cell>
+            <Table.Cell>Jill is an alright girl but sometimes you don't really have enough room to describe everything you'd like</Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    </section>
   </Fragment>
 )
 
