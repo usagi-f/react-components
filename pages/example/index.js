@@ -4,6 +4,7 @@ import Headers from './Headers'
 import Texts from './Texts'
 import Tables from './Tables'
 import Icons from './Icons'
+import Dropdowns from './Dropdowns'
 
 export {
   Buttons,
@@ -12,4 +13,5 @@ export {
   Texts,
   Tables,
   Icons,
+  Dropdowns,
 }
