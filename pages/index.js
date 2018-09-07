@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import { Buttons, Inputs, Headers, Texts, Tables } from './example/index'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Buttons, Inputs, Headers, Texts, Tables, Icons } from './example/index'
 
 const styles = css`
 h1 {
@@ -15,7 +14,6 @@ h1 {
 
 const Index = () => (
   <Fragment>
-    <FontAwesomeIcon icon="stroopwafel" size="3x" color="red" spin />
     <h1>Button</h1>
     <Buttons />
     <h1>Input</h1>
@@ -26,6 +24,8 @@ const Index = () => (
     <Texts />
     <h1>Table</h1>
     <Tables />
+    <h1>Icon</h1>
+    <Icons />
     <style jsx>{styles}</style>
   </Fragment>
 )
