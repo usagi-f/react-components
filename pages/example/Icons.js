@@ -53,7 +53,6 @@ const Buttons = () => (
       <span><Icon icon="key" fixedWidth /></span>
       <span><Icon icon="laugh" fixedWidth /></span>
       <span><Icon icon="list" fixedWidth /></span>
-      <span><Icon icon="map-maker-alt" fixedWidth /></span>
       <span><Icon icon="money-bill" fixedWidth /></span>
       <span><Icon icon="music" fixedWidth /></span>
       <span><Icon icon="paper-plane" fixedWidth /></span>
