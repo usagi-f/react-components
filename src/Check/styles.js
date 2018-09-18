@@ -6,35 +6,45 @@ export default css`
   position: relative;
   display: inline-flex;
   align-items: center;
+  margin-right: 3px;
 
-  & > input {
-    appearance: none;
-    display: inline-block;
-    box-sizing: border-box;
-    border-width: 1px;
-    border-style: solid;
-    border-color: ${variable.color.gray40};
-    box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05);
-    border-radius: 4px;
-    margin: 0;
-    cursor: pointer;
+  .input {
+    position: relative;
     width: 18px;
     height: 18px;
-    outline: none;
-    margin-right: 3px;
-    position: relative;
 
-    &:checked {
-      background-color: ${variable.color.blue};
-    }
+    & > input {
+      appearance: none;
+      display: inline-block;
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: ${variable.color.gray40};
+      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05);
+      border-radius: 4px;
+      margin: 0;
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+      outline: none;
+      position: relative;
 
-    &:focus {
-      border-color: ${variable.color.blue};
-      box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px rgba(0, 0, 0, .1);
+      &[type=radio] {
+        border-radius: 18px;
+      }
+
+      &:checked {
+        background-color: ${variable.color.blue};
+      }
+
+      &:focus {
+        border-color: ${variable.color.blue};
+        box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px rgba(0, 0, 0, .1);
+      }
     }
   }
 
-  & > .label {
+  .label {
     font-family: ${variable.fontFamily};
     font-size: ${variable.size.medium}px;
     font-weight: normal;
@@ -46,15 +56,28 @@ export default css`
     user-select: none;
   }
 
-  & > .check {
+  .check,
+  .radio {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    pointer-events: none;
     display: inline-flex;
     justify-content: center;
-    width: 18px;
-    pointer-events: none;
+    align-items: center;
   }
 
-  &.active > input {
+  .radio {
+    width: 6px;
+    height: 6px;
+    background-color: ${variable.color.white};
+    border-radius: 6px;
+  }
+
+  &.active .input > input {
     border-color: ${variable.color.blue};
     box-shadow: inset 1px 1px 3px 0 rgba(0, 0, 0, .05), 0 0 0 3px rgba(0, 0, 0, .1);
   }
@@ -64,7 +87,7 @@ export default css`
   }
   &.disabled,
   &.readOnly {
-    & > input {
+    .input > input {
       cursor: default;
     }
   }

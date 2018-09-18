@@ -6,24 +6,28 @@ import styles from './styles'
 const getAttribute = props => ({
   className: cx({
     baseStyle: true,
+    radio: props.radio,
     error: props.error,
     active: props.active,
     readOnly: props.readOnly,
     disabled: props.disabled !== undefined,
   }),
+  type: props.radio ? 'radio' : 'checkbox',
   label: props.label || null,
   defaultChecked: props.defaultChecked,
   disabled: props.disabled || props.readOnly ? true : false,
   tabIndex: props.disabled ? '-1' : 0,
   readOnly: props.readOnly,
+  name: props.name,
   additionalStyle: props.style || {},
   onChange: props.onChange || null,
 })
 
 const Input = attribute => (
-  <Fragment>
+  <div className="input">
     <input
-      type="checkbox"
+      type={attribute.type}
+      name={attribute.name}
       defaultChecked={attribute.defaultChecked}
       disabled={attribute.disabled}
       tabIndex={attribute.tabIndex}
@@ -31,20 +35,30 @@ const Input = attribute => (
       style={attribute.additionalStyle}
       onChange={attribute.onChange}
     />
+    <CheckMark type={attribute.type} />
     <style jsx>{styles}</style>
-  </Fragment>
+  </div>
 )
 
-const CheckMark = attribute => (
-  <span className="check">
-    <FontAwesomeIcon
-      size="xs"
-      color="white"
-      icon="check"
-    />
-    <style jsx>{styles}</style>
-  </span>
-)
+const CheckMark = ({ type }) => {
+  if (type === 'radio') {
+    return (
+      <span className="radio">
+        <style jsx>{styles}</style>
+      </span>
+    )
+  }
+  return (
+    <span className="check">
+      <FontAwesomeIcon
+        size="xs"
+        color="white"
+        icon="check"
+      />
+      <style jsx>{styles}</style>
+    </span>
+  )
+}
 
 export default props => {
   const attribute = getAttribute(props)
@@ -52,7 +66,6 @@ export default props => {
     return (
       <label className={attribute.className}>
         <Input {...attribute} />
-        <CheckMark />
         <span className="label">{attribute.label}</span>
         <style jsx>{styles}</style>
       </label>
@@ -61,7 +74,6 @@ export default props => {
   return (
     <div className={attribute.className}>
       <Input {...attribute} />
-      <CheckMark />
       <style jsx>{styles}</style>
     </div>
   )
