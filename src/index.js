@@ -5,6 +5,7 @@ import Text from './Text'
 import Table from './Table'
 import Icon from './Icon'
 import Dropdown from './Dropdown'
+import Check from './Check'
 
 export {
   Button,
@@ -14,4 +15,5 @@ export {
   Table,
   Icon,
   Dropdown,
+  Check,
 }

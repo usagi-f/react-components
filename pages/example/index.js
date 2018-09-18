@@ -5,6 +5,7 @@ import Texts from './Texts'
 import Tables from './Tables'
 import Icons from './Icons'
 import Dropdowns from './Dropdowns'
+import Checks from './Checks'
 
 export {
   Buttons,
@@ -14,4 +15,5 @@ export {
   Tables,
   Icons,
   Dropdowns,
+  Checks,
 }
