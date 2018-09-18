@@ -35,7 +35,7 @@ export default props => {
         onChange={attribute.onChange}
       >
         {attribute.content.map(element => (
-          <option value={element.value}>{element.text}</option>
+          <option value={element.value} key={element.value}>{element.text}</option>
         ))}
       </select>
       <style jsx>{styles}</style>
