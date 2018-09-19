@@ -6,6 +6,7 @@ import Tables from './Tables'
 import Icons from './Icons'
 import Dropdowns from './Dropdowns'
 import Checks from './Checks'
+import Segments from './Segments'
 
 export {
   Buttons,
@@ -16,4 +17,5 @@ export {
   Icons,
   Dropdowns,
   Checks,
+  Segments,
 }

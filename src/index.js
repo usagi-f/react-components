@@ -6,6 +6,7 @@ import Table from './Table'
 import Icon from './Icon'
 import Dropdown from './Dropdown'
 import Check from './Check'
+import Segment from './Segment'
 
 export {
   Button,
@@ -16,4 +17,5 @@ export {
   Icon,
   Dropdown,
   Check,
+  Segment,
 }
