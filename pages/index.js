@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
-import { Buttons, Inputs, Headers, Texts, Tables, Icons, Dropdowns, Checks, Segments } from './example/index'
+import { Buttons, Inputs, Headers, Texts, Tables, Icons, Dropdowns, Checks, Segments, Dividers } from './example/index'
 
 const styles = css`
 h1 {
@@ -32,6 +32,8 @@ const Index = () => (
     <Checks />
     <h1>Segment</h1>
     <Segments />
+    <h1>Dividers</h1>
+    <Dividers />
     <style jsx>{styles}</style>
   </Fragment>
 )

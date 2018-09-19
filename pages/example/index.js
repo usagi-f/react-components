@@ -7,6 +7,7 @@ import Icons from './Icons'
 import Dropdowns from './Dropdowns'
 import Checks from './Checks'
 import Segments from './Segments'
+import Dividers from './Dividers'
 
 export {
   Buttons,
@@ -18,4 +19,5 @@ export {
   Dropdowns,
   Checks,
   Segments,
+  Dividers,
 }
