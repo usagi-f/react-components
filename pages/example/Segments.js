@@ -3,7 +3,7 @@ import { Segment } from '../../src'
 
 const sizes = ['mini', 'tiny', 'small', 'large', 'big', 'huge', 'massive']
 
-const Texts = () => (
+const Segments = () => (
   <section>
     <Segment>Pellentesque habitant morbi tristique senectus.</Segment>
     <h4>Other Attribute</h4>
@@ -38,4 +38,4 @@ const Texts = () => (
   </section>
 )
 
-export default Texts
+export default Segments
