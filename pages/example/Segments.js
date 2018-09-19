@@ -19,6 +19,22 @@ const Texts = () => (
         It's a {size} segment
       </Segment>
     ))}
+    <h5>Group</h5>
+    <Segment.Group>
+      <Segment>It's a medium segment</Segment>
+      <Segment>And it's a medium segment, too.</Segment>
+      <Segment>And more.</Segment>
+    </Segment.Group>
+    <h5>Horizontal Group</h5>
+    <Segment.Group horizontal>
+      <Segment>Left</Segment>
+      <Segment>Center</Segment>
+      <Segment>Right</Segment>
+    </Segment.Group>
+    <h5>Text align</h5>
+    <Segment textAlign="left">Left aligned content.</Segment>
+    <Segment textAlign="right">Right aligned content.</Segment>
+    <Segment textAlign="center">Center aligned content.</Segment>
   </section>
 )
 

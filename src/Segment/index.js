@@ -9,12 +9,13 @@ const getAttribute = props => ({
     disabled: props.disabled,
     basic: props.basic,
     [props.size]: props.size !== undefined,
+    [props.textAlign]: props.textAlign !== undefined,
   }),
   additionalStyle: props.style || {},
   content: props.content || props.children,
 })
 
-export default props => {
+const Segment = props => {
   const attribute = getAttribute(props)
   return (
     <Fragment>
@@ -25,3 +26,14 @@ export default props => {
     </Fragment>
   )
 }
+
+Segment.Group = props => (
+  <Fragment>
+    <div className={`group ${props.horizontal ? 'horizontal' : null}`}>
+      {props.children}
+    </div>
+    <style jsx>{styles}</style>
+  </Fragment>
+)
+
+export default Segment

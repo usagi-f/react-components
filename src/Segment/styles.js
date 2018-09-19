@@ -57,5 +57,47 @@ export default css`
     font-size: ${variable.size.massive}px;
     padding: 17px 23px;
   }
+
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
+  &.center {
+    text-align: center;
+  }
+}
+.group {
+  box-shadow: rgba(0, 0, 0, .1) 0 0 3px 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: ${variable.color.gray40};
+  margin: 1em 0;
+
+  & > .baseStyle {
+    box-shadow: none;
+    margin: 0;
+    border-radius: 0;
+    border-width: 0 0 1px 0;
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+
+  &.horizontal {
+    display: flex;
+
+    & > .baseStyle {
+      flex: 1;
+      border-width: 0 1px 0 0;
+
+      &:last-child {
+        border-right-width: 0;
+      }
+    }
+  }
 }
 `
