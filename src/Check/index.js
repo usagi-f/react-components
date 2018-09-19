@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import cx from 'classnames'
 import styles from './styles'
@@ -60,7 +61,7 @@ const CheckMark = ({ type }) => {
   )
 }
 
-export default props => {
+const Check = props => {
   const attribute = getAttribute(props)
   if (attribute.label) {
     return (
@@ -78,3 +79,19 @@ export default props => {
     </div>
   )
 }
+
+Check.propTypes = {
+  type: PropTypes.string,
+  radio: PropTypes.bool,
+  error: PropTypes.bool,
+  radio: PropTypes.bool,
+  label: PropTypes.string,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  readOnly: PropTypes.bool,
+  name: PropTypes.string,
+  style: PropTypes.object,
+  onChange: PropTypes.func,
+}
+
+export default Check

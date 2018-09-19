@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -12,7 +13,7 @@ const getAttribute = props => ({
   content: props.content || props.children,
 })
 
-export default props => {
+const Header = props => {
   const attribute = getAttribute(props)
   return (
     <Fragment>
@@ -36,3 +37,18 @@ export default props => {
     </Fragment>
   )
 }
+
+Header.propTypes = {
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
+  style: PropTypes.object,
+  content: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
+}
+
+export default Header

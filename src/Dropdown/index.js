@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -21,7 +22,7 @@ const getAttribute = props => {
   }
 }
 
-export default props => {
+const Dropdown = props => {
   const attribute = getAttribute(props)
   return (
     <div className={attribute.className}>
@@ -42,3 +43,21 @@ export default props => {
     </div>
   )
 }
+
+Dropdown.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  size: PropTypes.number,
+  disabled: PropTypes.bool,
+  radio: PropTypes.bool,
+  defaultChecked: PropTypes.bool,
+  disabled: PropTypes.bool,
+  options: PropTypes.arrayOf(PropTypes.shape({
+    value: PropTypes.string,
+    text: PropTypes.string,
+  })),
+  style: PropTypes.object,
+  onChange: PropTypes.func,
+}
+
+export default Dropdown

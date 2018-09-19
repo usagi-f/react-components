@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -11,7 +12,7 @@ const getAttribute = props => ({
   additionalStyle: props.style || {},
 })
 
-export default props => {
+const Divider = props => {
   const attribute = getAttribute(props)
   return (
     <Fragment>
@@ -20,3 +21,11 @@ export default props => {
     </Fragment>
   )
 }
+
+Divider.propTypes = {
+  fitted: PropTypes.bool,
+  hidden: PropTypes.bool,
+  style: PropTypes.object,
+}
+
+export default Divider

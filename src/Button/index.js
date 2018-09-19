@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -22,7 +23,7 @@ const getAttribute = props => {
   }
 }
 
-export default props => {
+const Button = props => {
   const attribute = getAttribute(props)
   return (
     <Fragment>
@@ -41,3 +42,24 @@ export default props => {
     </Fragment>
   )
 }
+
+Button.propTypes = {
+  type: PropTypes.string,
+  color: PropTypes.string,
+  active: PropTypes.bool,
+  rounded: PropTypes.bool,
+  disabled: PropTypes.bool,
+  ['aria-label']: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+  content: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+  ]),
+}
+
+export default Button

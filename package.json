@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.1.2",
     "classnames": "^2.2.6",
     "next": "^6.1.1",
+    "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "styled-jsx": "^3.0.2"
