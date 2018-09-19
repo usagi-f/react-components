@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -10,7 +11,7 @@ const getAttribute = props => ({
   content: props.content || props.children,
 })
 
-export default props => {
+const Text = props => {
   const attribute = getAttribute(props)
   return (
     <Fragment>
@@ -21,3 +22,19 @@ export default props => {
     </Fragment>
   )
 }
+
+Text.propTypes = {
+  style: PropTypes.object,
+  content: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node,
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node,
+  ]),
+}
+
+export default Text

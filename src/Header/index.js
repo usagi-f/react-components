@@ -44,10 +44,12 @@ Header.propTypes = {
   content: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
+    PropTypes.node,
   ]),
   children: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.string,
+    PropTypes.node,
   ]),
 }
 

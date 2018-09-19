@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -16,7 +17,7 @@ const getAttribute = props => ({
   onChange: props.onChange || null,
 })
 
-export default props => {
+const Input = props => {
   const attribute = getAttribute(props)
   return (
     <Fragment>
@@ -33,3 +34,15 @@ export default props => {
     </Fragment>
   )
 }
+
+Input.propTypes = {
+  password: PropTypes.bool,
+  error: PropTypes.bool,
+  active: PropTypes.bool,
+  disabled: PropTypes.bool,
+  placeholder: PropTypes.string,
+  style: PropTypes.object,
+  onChange: PropTypes.func,
+}
+
+export default Input

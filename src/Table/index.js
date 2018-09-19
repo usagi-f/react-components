@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
 
@@ -92,5 +93,21 @@ Table.HeaderCell = props => {
 
 Table.Header = props => <thead>{props.children}</thead>
 Table.Body = props => <tbody>{props.children}</tbody>
+
+Table.propTypes = {
+  sorted: PropTypes.oneOf(['descending', 'ascending']),
+  onClick: PropTypes.func,
+  style: PropTypes.object,
+  content: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node,
+  ]),
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node,
+  ]),
+}
 
 export default Table
