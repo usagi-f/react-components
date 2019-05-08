@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import css from 'styled-jsx/css'
+import _JSXStyle from "styled-jsx/style"
 import { Buttons, Inputs, Headers, Texts, Tables, Icons, Dropdowns, Checks, Segments, Dividers } from './example/index'
 
 const styles = css`

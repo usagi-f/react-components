@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import cx from 'classnames'
 import styles from './styles'
+import _JSXStyle from "styled-jsx/style"
 
 const getAttribute = props => ({
   className: cx({

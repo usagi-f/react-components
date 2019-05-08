@@ -1,7 +1,8 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import styles from './styles'
+import _JSXStyle from "styled-jsx/style"
 
 const getAttribute = (props, tag) => {
   const isSorted = props.sorted === 'descending' || props.sorted === 'ascending'

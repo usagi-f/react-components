@@ -1,5 +1,6 @@
 import React from 'react'
 import css from 'styled-jsx/css'
+import _JSXStyle from "styled-jsx/style"
 import { Check } from '../../src/index'
 
 const styles = css`
