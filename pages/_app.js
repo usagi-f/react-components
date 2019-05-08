@@ -1,4 +1,5 @@
 import App, { Container } from 'next/app'
+import Head from 'next/head'
 import React from 'react'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
@@ -20,6 +21,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <Container>
+        <Head>
+          <title>react ui component</title>
+        </Head>
         <Component {...pageProps} />
       </Container>
     )
